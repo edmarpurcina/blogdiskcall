@@ -6,6 +6,13 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Olá Mundo Batas</h1>
+    {% for artigo in artigos %}
+        <article>
+            <h2> {{ artigo.artigo_titulo }} </h2>
+            <h6>Data de Criação: {{ artigo.artigo_data_criacao }} Data de Modificação: {{ artigo.artigo_data_modificacao }}</h6>
+
+            <p> {{ artigo.artigo_texto }} </p>
+        </article>
+    {% endfor %}
 </body>
 </html>

@@ -8,8 +8,8 @@ class Artigo(models.Model):
     artigo_data_criacao = models.DateField(auto_now_add=True)
     aritcle_data_modificacao = models.DateField(auto_now_add=True)
     artigo_titulo = models.CharField(max_length=20)
-    artigo_texto = models.CharField(max_length=1024)
+    artigo_texto = models.TextField(max_length=1024)
     artigo_autor_ip = models.CharField(max_length=15)
 
-    def __ster__(self):
-        return self.artigo_title
+    def __str__(self):
+        return self.artigo_titulo
