@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
-from loginblog.views import *
+from home.views import home_page
 
 urlpatterns = [
-    path('', ola_mundo)
+    path('', home_page, name='home')
 ]
