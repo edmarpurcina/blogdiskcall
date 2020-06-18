@@ -10,6 +10,7 @@ class Artigo(models.Model):
     artigo_titulo = models.CharField(max_length=20)
     artigo_texto = models.TextField(max_length=1024)
     artigo_autor_ip = models.CharField(max_length=15)
+    artigo_resumo = models.CharField(max_length=160, blank=True)
 
     def __str__(self):
         return self.artigo_titulo
