@@ -15,10 +15,9 @@
 			<p>
                 {{ artigo.artigo_resumo }}
 			</p>
-            
-			<p>
-				<a class="btn btn-primary btn-large" href="{% url 'artigo' artigo.artigo_id %}">Veja Mais »</a>
-			</p>
+            <article>
+                {{ artigo.artigo_texto }}
+            </article>
 		</div>
 
     {% endfor %}

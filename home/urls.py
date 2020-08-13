@@ -1,7 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from home.views import home_page
+from .views import *
 
 urlpatterns = [
-    path('', home_page, name='home')
+    path('', home_page, name='home'),
+    path('artigo/<int:artigo_id>', ver_artigo, name='artigo'),
+    
 ]
