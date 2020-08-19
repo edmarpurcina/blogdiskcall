@@ -17,4 +17,4 @@ def pesquisar(request, pesquisa):
     artigos = Artigo.objects.filter(artigo_titulo='pesquisa')
 
     return redirect('pesquisar')
-    #return render(request, "pesquisa.html", {'artigos': artigos})
+    return render(request, "pesquisa.html", {'artigos': artigos})

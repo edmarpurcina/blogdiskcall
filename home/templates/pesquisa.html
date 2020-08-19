@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block pesquisa %}
+    {% for artigo in artigos %}
+        {{  artigo.artigo_titulo }}
+        {{ artigo.artigo_resumo }}
+
+    {% endfor %}
+
+{% endblock pesquisa %}
