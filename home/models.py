@@ -8,7 +8,7 @@ class Artigo(models.Model):
     artigo_data_criacao = models.DateField(auto_now_add=True)
     aritcle_data_modificacao = models.DateField(auto_now_add=True)
     artigo_titulo = models.CharField(max_length=20)
-    artigo_texto = models.TextField(max_length=1024)
+    artigo_texto = models.TextField(max_length=102400)
     artigo_autor_ip = models.CharField(max_length=15)
     artigo_resumo = models.CharField(max_length=160, blank=True)
     artigo_keywords = models.CharField(max_length=160, blank= True)

@@ -1,25 +1,27 @@
 {% extends 'index.html' %}
 
 {% block artigo %}
-
+				
     {% for artigo in artigos %}
+		<div class="jumbotron">
 
-        <div class="col-md-8">
-			<h2>
-				{{ artigo.artigo_titulo }}
-			</h2>
-            <h6>
-                Keywords: {{ artigo.artigo_keywords }}
-                Data de Criação: {{ artigo.artigo_data_criacao }}
-            </h6>
-			<p>
-                {{ artigo.artigo_resumo }}
-			</p>
-            
-			<p>
-				<a class="btn btn-primary btn-large" href="{% url 'artigo' artigo.artigo_id %}">Veja Mais »</a>
-			</p>
+			<div class="col-md-8">
+				<h2>
+					{{ artigo.artigo_titulo }}
+				</h2>
+				<h6>
+					Keywords: {{ artigo.artigo_keywords }}
+					Data de Criação: {{ artigo.artigo_data_criacao }}
+				</h6>
+				<p>
+					{{ artigo.artigo_resumo }}
+				</p>
+				
+				<p>
+					<a class="btn btn-primary btn-large" href="{% url 'artigo' artigo.artigo_id %}">Veja Mais »</a>
+				</p>
+			</div>
 		</div>
-
     {% endfor %}
+
 {% endblock artigo %}

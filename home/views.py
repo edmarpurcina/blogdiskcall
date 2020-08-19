@@ -9,6 +9,12 @@ def home_page(request):
     return render( request, "home.html", {'artigos': artigos})
 
 def ver_artigo(request, artigo_id):
-    artigos = Artigo.objects.all()
+    artigos = Artigo.objects.get(artigo_id=artigo_id)
 
     return render(request, "ver_artigo.html", {'artigos': artigos})
+
+def pesquisar(request, pesquisa):
+    artigos = Artigo.objects.filter(artigo_titulo='pesquisa')
+
+    return redirect('pesquisar')
+    #return render(request, "pesquisa.html", {'artigos': artigos})

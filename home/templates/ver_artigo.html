@@ -2,23 +2,22 @@
 
 {% block artigo %}
 
-    {% for artigo in artigos %}
+    <div class="col-md-8">
+        <center>
+            <h1>
+                {{ artigos.artigo_titulo }}
+            </h1>
+        </center>
+        <h6>
+            Keywords: {{ artigos.artigo_keywords }}<br>
+            Data de Criação: {{ artigos.artigo_data_criacao }} por {{ artigos.artigo_autor_nome }}
+        </h6>
+        <p>
+            {{ artigos.artigo_resumo }}
+        </p>
+        <article>
+            {{ artigos.artigo_texto }}
+        </article>
+    </div>
 
-        <div class="col-md-8">
-			<h2>
-				{{ artigo.artigo_titulo }}
-			</h2>
-            <h6>
-                Keywords: {{ artigo.artigo_keywords }}
-                Data de Criação: {{ artigo.artigo_data_criacao }}
-            </h6>
-			<p>
-                {{ artigo.artigo_resumo }}
-			</p>
-            <article>
-                {{ artigo.artigo_texto }}
-            </article>
-		</div>
-
-    {% endfor %}
 {% endblock artigo %}
